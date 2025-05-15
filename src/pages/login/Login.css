@@ -1,0 +1,82 @@
+/* A mãe de todos: */
+.main_login{
+    display: flex;
+
+        height: 100vh;
+}
+
+/* Banner da esquerda: */
+.banner{
+    background-image: url("../../assets/img/fundoLogin.png");
+    flex: 1;
+
+    /* Modificar algumas caracteristicas da imagem: */
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Form de login da direita: */
+.section_login{
+    flex: 1;
+
+    background-color: #CC3F55;
+
+    /* Centraliza o campo: */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_login{
+    color: white;
+
+    width: 70%;
+    height: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form_login h1{
+    /* Vai deixar o titulo com letras maiusculas */
+    text-transform: uppercase;
+}
+
+.campos_login{
+    width: 100%;
+}
+
+.campo_input {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 20px;
+}
+
+.campo_input input{
+    height: 30px;
+    padding: 0 10px;
+    margin-top: 7px;
+
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 1px 4px 4px 0px #00000045;
+}
+
+/* RESPONSIVIDADE 😊🤪🎉 */
+
+/* Me de algumas caracteristicas a 
+partir de um tamanho de tela */
+@media screen and (max-width: 768px){
+    /* 0px -> 768px */
+    .banner{
+        /* display: nonde; =>desaparece o banner */
+        display: none;
+    }
+}
+

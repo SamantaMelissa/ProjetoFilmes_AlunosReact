@@ -1,0 +1,105 @@
+/* A mãe de todos: */
+.listagem{
+    /* vamos retirar:
+        header: 75px
+        cadastro: 252px
+        footer: 40px */
+    min-height: calc(100vh - (75px + 252px + 40px));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 40px 0;
+}
+/* -------------------------------------------- */
+
+/* titulo: */
+
+.listagem h1{
+    text-transform: uppercase;
+}
+
+.listagem hr {
+    max-width: 300px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #73061B;
+    margin-top: 5px;
+}
+
+/* -------------------------------------------- */
+/* icone de lixo e editar: */
+
+.item_lista img{
+    height: 28px;
+}
+/* -------------------------------------------- */
+
+.tabela{
+    width: 100%;
+    margin-top: 30px;
+} 
+
+.tabela table{
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+.tabela .table_cabecalho :first-child{
+    width: 300px;
+}
+
+.tabela  .table_cabecalho :nth-child(2){
+    width: 200px;
+}
+
+.tabela  .table_cabecalho th{
+    width: 100px;
+}
+
+.item_lista td{
+    /* desgrudar o item do titulo */
+     padding: 20px 0 10px 0;
+}
+
+.item_lista {
+    text-align: center;
+
+    border-bottom: solid 1px #73061B20;
+}
+
+@media screen and (max-width: 768px){
+    /* 1px - 768px */
+    .tabela thead{
+        display: none;
+    }
+
+    /* Um elemento abaixo do outro: */
+    .item_lista td{
+        display: grid;
+        text-align: left;
+        padding: 10px 10px 10px 0;
+        grid-template-columns: 10ch auto;
+    }
+
+    .item_lista td::before{
+          /* Adiciona o data-cell do html e coloca os : depois */
+        content: attr(data-cell) ":";
+        font-weight: 700;
+        width: 80px;
+        text-align: left;
+    }
+
+    .item_lista td:last-child{
+        margin-bottom: 24px;
+    }
+
+    .item_lista td:first-child{
+        margin-top: 24px;
+    }
+}
+  
+
