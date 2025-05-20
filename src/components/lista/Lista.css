@@ -101,5 +101,10 @@
         margin-top: 24px;
     }
 }
-  
+
+  .icon{
+    border: none;
+    background: none;
+    width: fit-content;
+}
 

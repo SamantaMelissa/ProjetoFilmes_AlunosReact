@@ -36,9 +36,15 @@ const Lista = (props) => {
                                         {item.nome}
                                     </td>
                                     <td data-cell="Gênero" style={{display:props.visibilidade}}>Ação</td>
-                                    <td data-cell="Editar"><img src={Editar} alt="Caneta"/></td>
+                                    <td data-cell="Editar">
+                                        <button className="icon" onClick={() => {props.funcEditar(item)}}>
+                                            <img src={Editar} alt="Caneta"/>
+                                        </button>
+                                    </td>
                                     <td data-cell="Excluir">
-                                        <img src={Excluir} alt="Lixeira"/>
+                                        <button className="icon" onClick={() => {props.funcExcluir(item)}}>
+                                            <img src={Excluir} alt="Lixeira"/>
+                                        </button>
                                     </td>
                                 </tr>
                             ))
